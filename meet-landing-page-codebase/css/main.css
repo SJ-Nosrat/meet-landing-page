@@ -1,0 +1,87 @@
+/* UNIVERSAL STYLES */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    /* COLORS */
+    --green-color: #4D96A9;
+    --dark-purple-color: #855FB1;
+    --black-color: #28283D;
+    --grey-color: #87879D;
+    --turquoise-color: #8FE3F9;
+    --light-purple-color: #D9B8FF;
+    --white-accent-color: #FAFAFA;
+
+    /* FONT SIZES */
+    --primary-heading-size: 4rem;
+    --secondary-heading-size: 2.5rem;
+    --overline-size: 1rem;
+    --main-p-size: 1.125rem;
+
+    /* FONT WEIGHT */
+    --primary-fw-900: 900;
+    --secondary-fw-500: 500;
+
+    /* FONT FAMILY */
+    --primary-ff: 'Red Hat Display', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+/* MAIN STYLES */
+
+body {
+    min-height: 100vh;
+    font-size: var(--main-p-size);
+    font-family: var(--primary-ff);
+    font-weight: var(--secondary-fw-500);
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.intro-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "hero-img"
+        "main-heading"
+        "info-p"
+        "dl-btn"
+        "what-btn";
+}
+
+.main-heading {
+    grid-area: main-heading;
+}
+
+.img-mobile-hero {
+    grid-area: hero-img;
+    max-width: 100%;
+}
+
+.main-info {
+    grid-area: info-p;
+}
+
+.dl-btn > button {
+    grid-area: dl-btn;
+}
+
+.what-btn > button {
+    grid-area: what-btn;
+}
+
+.img-dt-hero-right,
+.img-dt-hero-left,
+.img-dt-footer {
+    display: none;
+}
