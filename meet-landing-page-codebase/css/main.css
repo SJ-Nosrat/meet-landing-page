@@ -16,8 +16,8 @@
     --white-accent-color: #FAFAFA;
 
     /* FONT SIZES */
-    --primary-heading-size: 4rem;
-    --secondary-heading-size: 2.5rem;
+    --dt-heading-size: 4rem;
+    --mobile-heading-size: 2.5rem;
     --overline-size: 1rem;
     --main-p-size: 1.125rem;
 
@@ -48,9 +48,13 @@ header {
     align-items: center;
 }
 
+.logo {
+    margin: 3rem 8rem 3.375rem;
+}
+
 .intro-container {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(20rem, 1fr);
     grid-template-areas: 
         "hero-img"
         "main-heading"
@@ -61,27 +65,152 @@ header {
 
 .main-heading {
     grid-area: main-heading;
+    font-size: var(--mobile-heading-size);
+    font-weight: var(--primary-fw-900);
+    line-height: 2.75rem;
+    text-align: center;
+    margin: 3rem 1.5rem 1.5rem;
+    color: var(--black-color);
 }
 
 .img-mobile-hero {
     grid-area: hero-img;
     max-width: 100%;
+    justify-self: center;
 }
 
 .main-info {
     grid-area: info-p;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--grey-color);
+    line-height: 1.625rem;
+    margin: 0 1.5rem 2rem;
 }
 
-.dl-btn > button {
+.dl-btn {
     grid-area: dl-btn;
+    width: 12.0625rem;
+    height: 3.3125rem;
+    justify-self: center;
+    border-radius: 2.3rem;
+    border-style: none;
+    margin: 0 5.6875rem 1rem;
+    background-color: var(--green-color);
+    color: var(--white-accent-color);
+    font-size: 1rem;
+    font-weight: var(--primary-fw-900);
+    text-align: center;
 }
 
-.what-btn > button {
+.dl-btn > span {
+    color: var(--turquoise-color);
+}
+
+.what-btn {
     grid-area: what-btn;
+    width: 8.6875rem;
+    height: 3.3125rem;
+    justify-self: center;
+    border-radius: 2.3rem;
+    border-style: none;
+    font-weight: var(--primary-fw-900);
+    font-size: 1rem;
+    background-color: var(--dark-purple-color);
+    color: var(--white-accent-color);
+    text-align: center;
+    margin: 0 7.375rem 4rem;
+}
+
+.info-container {
+    display: grid;
+    grid-template-columns: minmax(20rem, 1fr);
+    grid-template-areas: 
+        "bullet"
+        "figure"
+        "slogan"
+        "second-head"
+        "info-p-2";
+    
+}
+
+.decor-bullet {
+    grid-area: bullet;
+    justify-self: center;
+    
+}
+
+.decor-bullet > .vertical-line {
+    width: 1px;
+    height: 5.25rem;
+    background-color: var(--grey-color);
+    opacity: 0.25;
+    transform: translateX(1.75rem);
+}
+
+.decor-bullet > span {
+    display: block;
+    text-align: center;
+    font-weight: var(--primary-fw-900);
+    font-size: 1rem;
+    color: var(--grey-color);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    border: 1px solid var(--grey-color);
+    padding: 15px;
+    opacity: 0.25;
+}
+
+figure {
+    grid-area: figure;
+    /* justify-self: center; */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(9.44rem, 9.75rem));
+    justify-content: center;
+    align-content: center;
+    row-gap: 1.5625rem;
+    column-gap: 1.5rem;
+    margin: 4rem 0;
+}
+
+.img-info {
+    border-radius: 0.5rem;
+}
+
+.overline {
+    grid-area: slogan;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: var(--primary-fw-900);
+    line-height: 1.625rem;
+    margin: 0 3.125rem 1.5rem;
+    letter-spacing: 3px;
+    font-size: 1rem;
+    color: var(--green-color);
+}
+
+h2 {
+    grid-area: second-head;
+    text-align: center;
+    font-weight: var(--primary-fw-900);
+    font-size: 2rem;
+    color: var(--black-color);
+    margin: 0 1.5rem 2rem;
+    line-height: 2.25rem;
+}
+
+p {
+    grid-area: info-p-2;
 }
 
 .img-dt-hero-right,
 .img-dt-hero-left,
 .img-dt-footer {
     display: none;
+}
+
+img {
+    max-width: 100%;
 }
