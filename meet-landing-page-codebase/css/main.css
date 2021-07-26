@@ -79,7 +79,6 @@ img {
 
 .img-mobile-hero {
     grid-area: hero-img;
-    max-width: 100%;
     justify-self: center;
 }
 
@@ -293,4 +292,98 @@ footer {
 
 .dload-btn>span {
     color: var(--light-purple-color);
+}
+
+/* MEDIA QUERIES */
+
+@media (min-width: 768px) {
+    .intro-container {
+        grid-template-areas: 
+        "hero-img"
+        "main-heading"
+        "info-p"
+        "btn";
+    }
+
+    .main-heading {
+        font-size: 3rem;
+        line-height: 3rem;
+        margin: 4.5rem 13.4375rem 1.5rem;
+    }
+
+    .main-info-01 {
+        margin: 0 9.75rem 2rem;
+    }
+
+    .img-mobile-hero {
+        max-width: none;
+    }
+
+    .dl-btn,
+    .what-btn {
+        grid-area: btn;
+        margin: 0 0 5rem;
+        /* justify-self: center; */
+    }
+
+    .dl-btn {
+        justify-self: start;
+        margin-left: 13.125rem;
+    }
+
+    .what-btn {
+        justify-self: end;
+        margin-right: 13.125rem;
+    }
+
+    .overline {
+        margin: 0 15.6875rem 1rem;
+    }
+
+    .article-h2 {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        margin: 0 10.125rem 2rem;
+    }
+
+    .main-info-02 {
+        margin: 0 6.125rem 12rem;
+    }
+
+    footer {
+        background-image: linear-gradient(to bottom, rgba(77, 151, 169, 0.9), rgba(77, 151, 169, 0.9)),
+        url("../assets/tablet/image-footer.jpg");
+    }
+
+    .footer-h2 {
+        font-size: 2.5rem;
+        line-height: 2.75rem;
+        margin: 5.75rem 9.75rem 2rem;
+    }
+
+    .footer-p {
+        margin: 0 6.125rem 2.5rem;
+    }
+
+    .dload-btn {
+        margin: 0 18rem 4.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .main-info-01 {
+        margin-left: 15rem;
+        margin-right: 15rem;
+    }
+
+    .dl-btn,
+    .what-btn {
+        margin: 0 16rem 6rem;
+    }
+
+    .main-info-02,
+    .footer-p {
+        margin-left: 9rem;
+        margin-right: 9rem;
+    }
 }
