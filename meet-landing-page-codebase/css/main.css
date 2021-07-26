@@ -56,6 +56,7 @@ img {
     margin: 3rem 8rem 3.375rem;
 }
 
+
 .intro-container {
     display: grid;
     grid-template-columns: minmax(20rem, 1fr);
@@ -63,8 +64,7 @@ img {
         "hero-img"
         "main-heading"
         "info-p"
-        "dl-btn"
-        "what-btn";
+        "btns";
 }
 
 .main-heading {
@@ -91,14 +91,20 @@ img {
     margin: 0 1.5rem 2rem;
 }
 
+.btn-wrapper {
+    grid-area: btns;
+    justify-self: center;
+    display: grid;
+}
+
 .dl-btn {
-    grid-area: dl-btn;
+    /* grid-area: dl-btn; */
     width: 12.0625rem;
     height: 3.3125rem;
     justify-self: center;
     border-radius: 2.3rem;
     border-style: none;
-    margin: 0 5.6875rem 1rem;
+    /* margin: 0 5.6875rem 1rem; */
     background-color: var(--green-color);
     color: var(--white-accent-color);
     font-size: 1rem;
@@ -111,7 +117,7 @@ img {
 }
 
 .what-btn {
-    grid-area: what-btn;
+    /* grid-area: what-btn; */
     width: 8.6875rem;
     height: 3.3125rem;
     justify-self: center;
@@ -122,7 +128,7 @@ img {
     background-color: var(--dark-purple-color);
     color: var(--white-accent-color);
     text-align: center;
-    margin: 0 7.375rem 4rem;
+    /* margin: 0 7.375rem 4rem; */
 }
 
 .info-container {
@@ -302,7 +308,7 @@ footer {
         "hero-img"
         "main-heading"
         "info-p"
-        "btn";
+        "btns";
     }
 
     .main-heading {
@@ -319,21 +325,16 @@ footer {
         max-width: none;
     }
 
-    .dl-btn,
-    .what-btn {
-        grid-area: btn;
+    .btn-wrapper {
+        grid-area: btns;
         margin: 0 0 5rem;
-        /* justify-self: center; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .dl-btn {
-        justify-self: start;
-        margin-left: 13.125rem;
-    }
-
-    .what-btn {
-        justify-self: end;
-        margin-right: 13.125rem;
+        margin-right: 1rem;
     }
 
     .overline {
@@ -376,14 +377,107 @@ footer {
         margin-right: 15rem;
     }
 
-    .dl-btn,
-    .what-btn {
-        margin: 0 16rem 6rem;
-    }
-
     .main-info-02,
     .footer-p {
         margin-left: 9rem;
         margin-right: 9rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .img-mobile-hero {
+        display: none;
+    }
+
+    .img-dt-hero-left,
+    .img-dt-hero-right {
+        display: block;
+    }
+
+    .intro-container {
+        max-width: 90rem;
+        margin: 0 auto;
+        grid-template-columns: minmax(24rem, 25rem) minmax(24rem, 1fr) minmax(24rem, 25rem);
+        grid-template-rows: 10rem 3.5rem 3.5rem 3.5rem;
+        grid-template-areas: 
+            "hero-left main-content hero-right"
+            "hero-left dt-para hero-right"
+            "hero-left dt-para hero-right"
+            "hero-left dt-btn hero-right";
+    }
+
+    .img-dt-hero-left {
+        grid-area: hero-left;
+        justify-self: start;
+    }
+
+    .img-dt-hero-right {
+        grid-area: hero-right;
+        justify-self: end;
+    }
+
+    .btn-wrapper {
+        grid-area: dt-btn;
+    }
+
+    .main-heading {
+        grid-area: main-content;
+        margin: 0;
+        font-size: var(--dt-heading-size);
+        line-height: 4rem;
+        width: 29rem;
+        justify-self: center;
+    }
+
+    .main-info-01 {
+        grid-area: dt-para;
+        margin: 2.125rem 5.9rem;
+        font-size: var(--main-p-size);
+    }
+
+    .info-container {
+        margin-top: 6.9rem;
+    }
+
+    .info-article-img {
+        grid-template-columns: repeat(auto-fit, minmax(10.3rem, 16rem));
+        row-gap: 1.875rem;
+    }
+
+    .article-h2 {
+        margin: 0 31.125rem 2rem;
+    }
+
+    .main-info-02 {
+        margin: 0 27.5rem 11.5rem;
+    }
+
+    footer {
+        background-image: linear-gradient(to bottom, rgba(77, 151, 169, 0.9), rgba(77, 151, 169, 0.9)),
+        url("../assets/desktop/image-footer.jpg");
+        grid-template-columns: minmax(21rem, 22rem) minmax(21rem, 22rem) minmax(12rem, 12.3rem);
+        grid-template-areas: 
+            "heading-02 para-02 btn";
+        justify-content: center;
+        column-gap: 3.5rem;
+    }
+
+    .footer-h2 {
+        grid-area: heading-02;
+        margin: 116px 0;
+        text-align: left;
+    }
+
+    .footer-p {
+        grid-area: para-02;
+        margin: 0;
+        text-align: left;
+        align-self: center;
+    }
+
+    .dload-btn {
+        grid-area: btn;
+        margin: 0;
+        align-self: center;
     }
 }
