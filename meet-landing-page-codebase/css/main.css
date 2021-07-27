@@ -397,6 +397,11 @@ footer {
         grid-template-columns: repeat(auto-fit, minmax(10.3rem, 12rem));
         row-gap: 1.875rem;
     }
+
+    .main-info-01,
+    .main-info-02 {
+        font-size: var(--main-p-size);
+    }
 }
 
 @media (min-width: 87.5rem) {
@@ -447,7 +452,6 @@ footer {
     .main-info-01 {
         grid-area: dt-para;
         margin: 2.125rem 5.9rem;
-        font-size: var(--main-p-size);
     }
 
     .info-container {
