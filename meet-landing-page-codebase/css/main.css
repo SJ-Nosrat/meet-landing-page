@@ -434,12 +434,12 @@ footer {
 
     .img-dt-hero-left {
         grid-area: hero-left;
-        justify-self: start;
+        justify-self: center;
     }
 
     .img-dt-hero-right {
         grid-area: hero-right;
-        justify-self: end;
+        justify-self: center;
     }
 
     .btn-wrapper {
