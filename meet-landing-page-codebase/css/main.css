@@ -248,7 +248,12 @@ footer {
     position: relative;
     display: grid;
     grid-template-columns: minmax(20rem, 1fr);
+    grid-template-areas: 
+        "foot-heading"
+        "foot-para"
+        "foot-btn";
 }
+
 
 .decor-bullet-02 {
     justify-self: center;
@@ -277,12 +282,14 @@ footer {
 }
 
 .footer-p {
+    grid-area: foot-para;
     line-height: 1.625rem;
     color: var(--white-accent-color);
     margin: 0 1.5rem 2rem;
 }
 
 .footer-h2 {
+    grid-area: foot-heading;
     font-size: 2rem;
     line-height: 2.25rem;
     color: var(--white-accent-color);
@@ -290,6 +297,7 @@ footer {
 }
 
 .dload-btn {
+    grid-area: foot-btn;
     width: 12.0625rem;
     height: 3.3125rem;
     justify-self: center;
@@ -472,17 +480,19 @@ footer {
     footer {
         background-image: linear-gradient(to bottom, rgba(77, 151, 169, 0.9), rgba(77, 151, 169, 0.9)),
         url("../assets/desktop/image-footer.jpg");
-        grid-template-columns: minmax(21rem, 22rem) minmax(21rem, 22rem) minmax(12rem, 12.3rem);
+        grid-template-columns: minmax(21rem, 1fr) minmax(21rem, .8fr) minmax(12rem, 0.75fr);
         grid-template-areas: 
             "heading-02 para-02 btn";
         justify-content: center;
-        column-gap: 3.5rem;
+        /* column-gap: 3.5rem; */
     }
 
     .footer-h2 {
         grid-area: heading-02;
         margin: 116px 0;
         text-align: left;
+        align-self: center;
+        padding-left: 165px;
     }
 
     .footer-p {
@@ -490,6 +500,7 @@ footer {
         margin: 0;
         text-align: left;
         align-self: center;
+        display: none;
     }
 
     .dload-btn {
@@ -512,5 +523,9 @@ footer {
     .dload-btn:active {
         background-color: #B18BDD;
         cursor: pointer;
+    }
+
+    .dload-btn:hover + .footer-p {
+        display: block;
     }
 }
