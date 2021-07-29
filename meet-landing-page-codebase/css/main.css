@@ -423,7 +423,7 @@ footer {
     }
 
     .intro-container {
-        grid-template-columns: repeat(3, minmax(24rem, 1fr)) ;
+        grid-template-columns: minmax(24rem, 1.5fr) minmax(24rem, 1fr) minmax(24rem, 1.5fr) ;
         grid-template-rows: 10rem 3.5rem 3.5rem 3.5rem;
         grid-template-areas: 
             "hero-left main-content hero-right"
