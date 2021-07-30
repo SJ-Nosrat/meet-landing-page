@@ -1,6 +1,6 @@
 # Frontend Mentor - Meet landing page solution
 
-This is a solution to the [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Meet landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/meet-landing-page-rbTDS6OUR). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -50,7 +50,9 @@ Using the correct semantic tags in **HTML 5** allows for easy lookup of your HTM
 ```html
 <main>The Main Content goes here! Occurs once per page.</main>
 
-<section>Different Sectional content goes here! Can be used multiple times per page.</section>
+<section>
+  Different Sectional content goes here! Can be used multiple times per page.
+</section>
 
 <footer>Occurs once per page.</footer>
 ```
@@ -60,14 +62,14 @@ For layout **CSS Grid** was primarily used; using the following properties:
 ```css
 .someContainer {
   grid-template-columns: repeat(3, minmax(20rem, 1fr))
-  grid-template-areas: 
+  grid-template-areas:
     "heading",
     "image",
     "footer";
 }
 ```
 
-Also using the following **CSS** properties to *Display* a block from **none** to **block** during the *hover* state. Make sure that the tag being hovered over **precedes** the tag to be *displayed*, as follows:
+Also using the following **CSS** properties to _Display_ a block from **none** to **block** during the _hover_ state. Make sure that the tag being hovered over **precedes** the tag to be _displayed_, as follows:
 
 ```html
 <button type="button">Download</button>
@@ -80,14 +82,14 @@ p {
 }
 
 button:hover + p {
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   display: block;
 }
 ```
 
 ### Continued development
 
-Refactoring **CSS** code, as well as starting to think about writing *re-usuable modular* code.
+Refactoring **CSS** code, as well as starting to think about writing _re-usuable modular_ code.
 
 ### Useful resources
 
