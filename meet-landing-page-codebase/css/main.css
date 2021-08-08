@@ -112,6 +112,8 @@ img {
 }
 
 .img-mobile-hero {
+    max-width: none;
+    width: 105vw;
     grid-area: hero-img;
 }
 
@@ -316,6 +318,11 @@ footer {
 /* MEDIA QUERIES */
 
 @media (min-width: 48rem) {
+    main {
+        max-width: 60rem;
+        margin: 0 auto;
+    }
+
     .intro-container {
         grid-template-areas: 
         "hero-img"
@@ -335,7 +342,7 @@ footer {
     }
 
     .img-mobile-hero {
-        max-width: none;
+        width: 100%;
     }
 
     .btn-wrapper {
@@ -413,6 +420,10 @@ footer {
 }
 
 @media (min-width: 87.5rem) {
+    main {
+        max-width: 95rem;
+    }
+    
     .img-mobile-hero {
         display: none;
     }
@@ -478,13 +489,14 @@ footer {
     }
 
     footer {
+        margin: 0 auto;
+        max-width: 95rem;
         background-image: linear-gradient(to bottom, rgba(77, 151, 169, 0.9), rgba(77, 151, 169, 0.9)),
         url("../assets/desktop/image-footer.jpg");
         grid-template-columns: minmax(21rem, 1fr) minmax(21rem, .8fr) minmax(12rem, 0.75fr);
         grid-template-areas: 
             "heading-02 para-02 btn";
         justify-content: center;
-        /* column-gap: 3.5rem; */
     }
 
     .footer-h2 {
